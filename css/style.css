@@ -29,3 +29,25 @@
     transform: translate(-50%, -50%);
     white-space: nowrap;
 }
+
+.color-1 {
+    color: #747474;
+    background-color: #272727;
+}
+
+.color-2 {
+    color: #747474;
+    background-color: #747474;
+}
+
+.fa-facebook {
+    color: #14A76C;
+}
+
+.fa-github {
+    color: #14A76C;
+}
+
+.fa-linkedin {
+    color: #14A76C;
+}
