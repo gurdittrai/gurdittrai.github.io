@@ -30,24 +30,51 @@
     white-space: nowrap;
 }
 
-.color-1 {
-    color: #747474;
+.bg-1 {
     background-color: #272727;
+}
+
+.bg-2 {
+    background-color: #747474;
+}
+
+.bg-3 {
+    background-color: #FF652F;
+}
+
+.bg-4 {
+    background-color: #FFE400;
+}
+
+.bg-5 {
+    background-color: #14A76C;
+}
+
+.color-1 {
+    color: #272727;
 }
 
 .color-2 {
     color: #747474;
-    background-color: #747474;
 }
 
-.fa-facebook {
+.color-3 {
+    color: #FF652F;
+}
+
+.color-4 {
+    color: #FFE400;
+}
+
+.color-5 {
     color: #14A76C;
 }
 
-.fa-github {
-    color: #14A76C;
+.row [class*='col-'] {
+    transition: all 0.5s ease-in-out;
 }
 
-.fa-linkedin {
-    color: #14A76C;
+#main-header .port-item:hover {
+    opacity: 0.8;
+    cursor: pointer;
 }

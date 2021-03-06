@@ -29,17 +29,23 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 color-1">
+                    <div class="col-lg-4 col-md-6 col-sm-12 bg-1">
                         <div
                             class="d-flex flex-row justify-content-center align-items-center"
                         >
-                            <a href="https://www.facebook.com/gurditt.rai.black/" target="_blank"> 
+                            <a
+                                href="https://www.facebook.com/gurditt.rai.black/"
+                                target="_blank"
+                            >
                                 <i class="fab fa-facebook fa-4x py-2 px-4"></i>
                             </a>
-                            <a href="https://www.github.com/gurdittrai" target="_blank"> 
+                            <a
+                                href="https://www.github.com/gurdittrai"
+                                target="_blank"
+                            >
                                 <i class="fab fa-github fa-4x py-2 px-4"></i>
                             </a>
-                            <a href="https://www.linkedin.com/" target="_blank"> 
+                            <a href="https://www.linkedin.com/" target="_blank">
                                 <i class="fab fa-linkedin fa-4x py-2 px-4"></i>
                             </a>
                         </div>
@@ -51,7 +57,53 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="row no-gutters bg-dark border p-2">
+                    <div id="home-nav" class="col-mg-3 col-sm-4">
+                        <div
+                            class="port-item color-3"
+                            data-toggle="collapse"
+                            data-target="#home"
+                        >
+                            <div class="d-flex flex-row justify-content-center">
+                                <span class="d-sm-block">Home</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="resume-nav" class="col-mg-3 col-sm-4">
+                        <div
+                            class="port-item color-4"
+                            data-toggle="collapse"
+                            data-target="#resume"
+                        >
+                            <div class="d-flex flex-row justify-content-center">
+                                <span class="d-sm-block">Resume</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="projects-nav" class="col-mg-3 col-sm-4">
+                        <div
+                            class="port-item color-5"
+                            data-toggle="collapse"
+                            data-target="#projects"
+                        >
+                            <div class="d-flex flex-row justify-content-center">
+                                <span class="d-sm-block">Projects</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </header>
+
+            <div class="collapse " id="home">
+                <div class="card card-body bg-3"></div>
+            </div>
+            <div class="collapse" id="resume">
+                <div class="card card-body bg-4"></div>
+            </div>
+            <div class="collapse" id="projects">
+                <div class="card card-body bg-5"></div>
+            </div>
         </div>
 
         <!-- javascript -->
@@ -67,5 +119,19 @@
             type="text/javascript"
             src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"
         ></script>
+        <script>
+            $('.port-item').click(function() {
+                $('.collapse').collapse('hide');
+                $('#home-nav').removeClass('col-md-6');
+                $('#home-nav').addClass('col-md-3');
+                $('#resume-nav').removeClass('col-md-6');
+                $('#resume-nav').addClass('col-md-3');
+                $('#projects-nav').removeClass('col-md-6');
+                $('#projects-nav').addClass('col-md-3');
+                $(this).parent().removeClass('col-md-3');
+                $(this).parent().addClass('col-md-6');
+            })
+        </script>
+        </body>
     </body>
 </html>
