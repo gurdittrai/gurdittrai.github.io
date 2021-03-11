@@ -59,7 +59,7 @@
                 </div>
 
                 <div class="row no-gutters bg-dark border-top font-weight-bold">
-                    <div id="home-nav" class="col-md-6 col-sm-4 color-3">
+                    <div id="home-nav" class="col-md-6 col-sm-4 color-3 active-nav">
                         <div
                             class="port-item p-2 bg-3 color-1"
                             data-toggle="collapse"
@@ -71,7 +71,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="resume-nav" class="col-md-3 col-sm-4 color-4">
+                    <div id="resume-nav" class="col-md-3 col-sm-4 color-4 inactive-nav">
                         <div
                             class="port-item p-2"
                             data-toggle="collapse"
@@ -83,7 +83,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="projects-nav" class="col-md-3 col-sm-4 color-5">
+                    <div id="projects-nav" class="col-md-3 col-sm-4 color-5 inactive-nav">
                         <div
                             class="port-item p-2"
                             data-toggle="collapse"
@@ -98,8 +98,8 @@
                 </div>
             </header>
             <!-- Content -->
-            <div class="collapse show bg-3" id="home">
-                <div class="card bg-3">
+            <div class="collapse show" id="home">
+                <div class="card bg-card" id="home-bg">
                     <div class="card-body m-5">
                         <h5 class="card-title">Gurditt Rai</h5>
                         <h6 class="card-subtitle mb-2 text-muted">Programmer</h6>
@@ -111,8 +111,8 @@
                     
                 </div>
             </div>
-            <div class="collapse bg-4" id="resume">
-                <div class="card bg-4">
+            <div class="collapse" id="resume">
+                <div class="card bg-card" id="resume-bg">
                     <div class="card-body m-5">
                         <h5 class="card-title">Education</h5>
                         University of Guelph, Guelph, ON September 2015 April 2020
@@ -120,8 +120,8 @@
                     </div>
                 </div>
             </div>
-            <div class="collapse bg-5" id="projects">
-                <div class="card bg-5">
+            <div class="collapse" id="projects">
+                <div class="card bg-card" id="projects-bg">
                     <div class="card-body m-5">
                         <h5 class="card-title">My Projects?</h5>
                         <h6 class="card-subtitle mb-2 text-muted">YOLO</h6>
@@ -162,24 +162,18 @@
                 }
                 // decrease size
                 $(this).parent().siblings().each(function(index, value) {
-                    console.log(this);
                     let sib = $(`#${this.id}`);
-                    sib.removeClass(`col-md-6`);
-                    sib.addClass('col-md-3');
+                    sib.removeClass(`col-md-6 active-nav`);
+                    sib.addClass('col-md-3 inactive-nav');
                     sib.children().removeClass(`${bg[this.id]} color-1`);
-                    // sib.children().addClass(`color-2`);
-                    console.log(sib.children());
 
                 })
                 // increase size
-                $(this).parent().removeClass('col-md-3');
-                $(this).parent().addClass('col-md-6');
+                $(this).parent().removeClass('col-md-3 inactive-nav');
+                $(this).parent().addClass('col-md-6 active-nav');
                 // change color
                 $(this).addClass(`${bg[$(this).parent().attr('id')]} color-1`);
                 $('.collapse').collapse('hide');
-                // console.log(bg[$(this).parent().attr('id')]);
-                // console.log();
-                // console.log(this);
             })
         </script>
         </body>
