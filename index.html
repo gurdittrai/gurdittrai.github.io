@@ -15,7 +15,7 @@
         />
         <link type="text/css" rel="stylesheet" href="css/style.css" />
         <!-- support for mobile devices -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
         <title>Gurditt</title>
     </head>
     <body>
@@ -58,34 +58,37 @@
                     </div>
                 </div>
 
-                <div class="row no-gutters bg-dark border p-2">
-                    <div id="home-nav" class="col-mg-3 col-sm-4">
+                <div class="row no-gutters bg-dark border-top font-weight-bold">
+                    <div id="home-nav" class="col-md-6 col-sm-4 color-3">
                         <div
-                            class="port-item color-3"
+                            class="port-item p-2 bg-3 color-1"
                             data-toggle="collapse"
                             data-target="#home"
+                            aria-expanded="true"
                         >
                             <div class="d-flex flex-row justify-content-center">
                                 <span class="d-sm-block">Home</span>
                             </div>
                         </div>
                     </div>
-                    <div id="resume-nav" class="col-mg-3 col-sm-4">
+                    <div id="resume-nav" class="col-md-3 col-sm-4 color-4">
                         <div
-                            class="port-item color-4"
+                            class="port-item p-2"
                             data-toggle="collapse"
                             data-target="#resume"
+                            aria-expanded="false"
                         >
                             <div class="d-flex flex-row justify-content-center">
                                 <span class="d-sm-block">Resume</span>
                             </div>
                         </div>
                     </div>
-                    <div id="projects-nav" class="col-mg-3 col-sm-4">
+                    <div id="projects-nav" class="col-md-3 col-sm-4 color-5">
                         <div
-                            class="port-item color-5"
+                            class="port-item p-2"
                             data-toggle="collapse"
                             data-target="#projects"
+                            aria-expanded="false"
                         >
                             <div class="d-flex flex-row justify-content-center">
                                 <span class="d-sm-block">Projects</span>
@@ -95,14 +98,43 @@
                 </div>
             </header>
             <!-- Content -->
-            <div class="collapse " id="home">
-                <div class="card card-body bg-3"></div>
+            <div class="collapse show bg-3" id="home">
+                <div class="card bg-3">
+                    <div class="card-body m-5">
+                        <h5 class="card-title">Gurditt Rai</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Programmer</h6>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                    </div>
+                    
+                </div>
             </div>
-            <div class="collapse" id="resume">
-                <div class="card card-body bg-4"></div>
+            <div class="collapse bg-4" id="resume">
+                <div class="card bg-4">
+                    <div class="card-body m-5">
+                        <h5 class="card-title">Education</h5>
+                        University of Guelph, Guelph, ON September 2015 April 2020
+                        Bachelor of Computing
+                    </div>
+                </div>
             </div>
-            <div class="collapse" id="projects">
-                <div class="card card-body bg-5"></div>
+            <div class="collapse bg-5" id="projects">
+                <div class="card bg-5">
+                    <div class="card-body m-5">
+                        <h5 class="card-title">My Projects?</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">YOLO</h6>
+                        <br>I'm in love with the coco</br>
+                        <br>I'm in love with the coco</br>
+                        <br>I got it for the low, low</br>
+                        <br>I'm in love with the coco</br>
+                        <br>I'm in love with the coco</br>
+                        <br>I'm in love with the coco</br>
+                        <br>I got it for the low, low</br>
+                        <br>I'm in love with the coco</br>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -121,15 +153,33 @@
         ></script>
         <script>
             $('.port-item').click(function() {
-                $('.collapse').collapse('hide');
-                $('#home-nav').removeClass('col-md-6');
-                $('#home-nav').addClass('col-md-3');
-                $('#resume-nav').removeClass('col-md-6');
-                $('#resume-nav').addClass('col-md-3');
-                $('#projects-nav').removeClass('col-md-6');
-                $('#projects-nav').addClass('col-md-3');
+                // collapse showing
+                let cshow = false;
+                let bg = {
+                    "home-nav": "bg-3",
+                    "resume-nav": "bg-4",
+                    "projects-nav": "bg-5"
+                }
+                // decrease size
+                $(this).parent().siblings().each(function(index, value) {
+                    console.log(this);
+                    let sib = $(`#${this.id}`);
+                    sib.removeClass(`col-md-6`);
+                    sib.addClass('col-md-3');
+                    sib.children().removeClass(`${bg[this.id]} color-1`);
+                    // sib.children().addClass(`color-2`);
+                    console.log(sib.children());
+
+                })
+                // increase size
                 $(this).parent().removeClass('col-md-3');
                 $(this).parent().addClass('col-md-6');
+                // change color
+                $(this).addClass(`${bg[$(this).parent().attr('id')]} color-1`);
+                $('.collapse').collapse('hide');
+                // console.log(bg[$(this).parent().attr('id')]);
+                // console.log();
+                // console.log(this);
             })
         </script>
         </body>
