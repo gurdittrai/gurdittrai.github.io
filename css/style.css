@@ -75,6 +75,7 @@ body {
 }
 
 .card {
+    top: -1px;
     border-left: 4px solid #272727;
     border-top: 0px;
     border-right: 4px solid #272727;
