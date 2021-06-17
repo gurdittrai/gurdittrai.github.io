@@ -1,182 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <!-- bootstrap 4 -->
-        <link
-            type="text/css"
-            rel="stylesheet"
-            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        />
-        <link
-            type="text/css"
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-        />
-        <link type="text/css" rel="stylesheet" href="css/style.css" />
-        <!-- support for mobile devices -->
-        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
-        <title>Gurditt</title>
-    </head>
-    <body>
-        <div class="container">
-            <header id="main-header">
-                <div class="row no-gutters bg-dark">
-                    <div class="col-lg-8 col-md-6 col-sm-12 border-right">
-                        <div class="bg-dark text-white">
-                            <div class="display-4 p-3 font-weight-bold">
-                                Gurditt Rai
-                            </div>
+
+<head>
+    <meta charset="UTF-8" />
+    <!-- bootstrap 4 -->
+    <link type="text/css" rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <!-- support for mobile devices -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <title>Gurditt</title>
+</head>
+
+<body>
+    <div class="container">
+        <header id="main-header">
+            <div class="row no-gutters bg-dark">
+                <div class="col-lg-8 col-md-6 col-sm-12 border-right">
+                    <div class="bg-dark text-white">
+                        <div class="display-4 p-3 font-weight-bold">
+                            Gurditt Rai
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 bg-1">
-                        <div
-                            class="d-flex flex-row justify-content-center align-items-center"
-                        >
-                            <a
-                                href="https://www.facebook.com/gurditt.rai/"
-                                target="_blank"
-                            >
-                                <i class="fab fa-facebook fa-4x py-2 px-4"></i>
-                            </a>
-                            <a
-                                href="https://www.github.com/gurdittrai"
-                                target="_blank"
-                            >
-                                <i class="fab fa-github fa-4x py-2 px-4"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/" target="_blank">
-                                <i class="fab fa-linkedin fa-4x py-2 px-4"></i>
-                            </a>
-                        </div>
-                        <div
-                            class="d-flex flex-row color-1 text-white px-5 align-items-center justify-content-around"
-                        >
-                            <i class="fas fa-envelope"></i>
-                            <div>gurdittrai@hotmail.com</div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 bg-1">
+                    <div class="d-flex flex-row justify-content-center align-items-center">
+                        <a href="https://www.facebook.com/gurditt.rai/" target="_blank">
+                            <i class="fab fa-facebook fa-4x py-2 px-4"></i>
+                        </a>
+                        <a href="https://www.github.com/gurdittrai" target="_blank">
+                            <i class="fab fa-github fa-4x py-2 px-4"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/" target="_blank">
+                            <i class="fab fa-linkedin fa-4x py-2 px-4"></i>
+                        </a>
+                    </div>
+                    <div class="d-flex flex-row color-1 text-white px-5 align-items-center justify-content-around">
+                        <i class="fas fa-envelope"></i>
+                        <div>gurdittrai@hotmail.com</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row no-gutters bg-dark border-top font-weight-bold">
+                <div id="home-nav" class="col-md-6 col-sm-4 color-3 active-nav">
+                    <div class="port-item p-2 bg-3 color-1" data-toggle="collapse" data-target="#home"
+                        aria-expanded="true">
+                        <div class="d-flex flex-row justify-content-center">
+                            <span class="d-sm-block">Home</span>
                         </div>
                     </div>
+                </div>
+                <div id="resume-nav" class="col-md-3 col-sm-4 color-4 inactive-nav">
+                    <div class="port-item p-2" data-toggle="collapse" data-target="#resume" aria-expanded="false">
+                        <div class="d-flex flex-row justify-content-center">
+                            <span class="d-sm-block">Resume</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="projects-nav" class="col-md-3 col-sm-4 color-5 inactive-nav">
+                    <div class="port-item p-2" data-toggle="collapse" data-target="#projects" aria-expanded="false">
+                        <div class="d-flex flex-row justify-content-center">
+                            <span class="d-sm-block">Projects</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Content -->
+        <div class="collapse show" id="home">
+            <div class="card bg-card" id="home-bg">
+                <div class="card-body m-5">
+                    <h5 class="card-title">Gurditt Rai</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Programmer</h6>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                    pariatur.
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                    est laborum
                 </div>
 
-                <div class="row no-gutters bg-dark border-top font-weight-bold">
-                    <div id="home-nav" class="col-md-6 col-sm-4 color-3 active-nav">
-                        <div
-                            class="port-item p-2 bg-3 color-1"
-                            data-toggle="collapse"
-                            data-target="#home"
-                            aria-expanded="true"
-                        >
-                            <div class="d-flex flex-row justify-content-center">
-                                <span class="d-sm-block">Home</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="resume-nav" class="col-md-3 col-sm-4 color-4 inactive-nav">
-                        <div
-                            class="port-item p-2"
-                            data-toggle="collapse"
-                            data-target="#resume"
-                            aria-expanded="false"
-                        >
-                            <div class="d-flex flex-row justify-content-center">
-                                <span class="d-sm-block">Resume</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="projects-nav" class="col-md-3 col-sm-4 color-5 inactive-nav">
-                        <div
-                            class="port-item p-2"
-                            data-toggle="collapse"
-                            data-target="#projects"
-                            aria-expanded="false"
-                        >
-                            <div class="d-flex flex-row justify-content-center">
-                                <span class="d-sm-block">Projects</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </header>
-            <!-- Content -->
-            <div class="collapse show" id="home">
-                <div class="card bg-card" id="home-bg">
-                    <div class="card-body m-5">
-                        <h5 class="card-title">Gurditt Rai</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Programmer</h6>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-                    </div>
-                    
-                </div>
             </div>
-            <div class="collapse" id="resume">
-                <div class="card bg-card" id="resume-bg">
-                    <div class="card-body m-5">
-                        <h5 class="card-title">Education</h5>
-                        University of Guelph, Guelph, ON September 2015 April 2020
-                        Bachelor of Computing
-                    </div>
-                </div>
-            </div>
-            <div class="collapse" id="projects">
-                <div class="card bg-card" id="projects-bg">
-                    <div class="card-body m-5">
-                        <h5 class="card-title">Banana Ripness</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Python using OpenCV and numpy</h6>
-                        <!-- <br>Description Card</br> -->
-                        <h5 class="card-title">Game of Life</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">OpenCL Application</h6>
-                        <!-- <br>Description Card</br> -->
-                        <h5 class="card-title">Image Browser</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">HTML/PHP/CSS webpage that shows images on the server</h6>
-                        <!-- <br>Description Card</br> -->
-                        <h5 class="card-title">Bannerlord Unit Manager</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">A Modding Tool for Mount and Blade Bannerlord</h6>
-                    </div>
+        </div>
+        <div class="collapse" id="resume">
+            <div class="card bg-card" id="resume-bg">
+                <div class="card-body m-5">
+                    <h5 class="card-title">Education</h5>
+                    University of Guelph, Guelph, ON September 2015 April 2020
+                    Bachelor of Computing
                 </div>
             </div>
         </div>
+        <div class="collapse" id="projects">
+            <div class="card bg-card" id="projects-bg">
+                <div class="card-body m-5">
+                    <!-- statement -->
+                    <h5 class="card-title">My Projects</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">These are my most notable programs that I have worked on or currently in development.</h6>
+                    <!-- Banana Ripness -->
+                    <section class="item">
+                        <section class="icon">
+                            <h5 class="card-title">OPEN</h5>
+                        </section>
+                        <section class="descrip">
+                            <h5 class="card-title">Banana Ripness</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Python using OpenCV and numpy</h6>
+                        </section>
+                    </section>
+                    <!-- Game of Life -->
+                    <section class="item">
+                        <section class="icon">
+                            <h5 class="card-title">OPEN</h5>
+                        </section>
+                        <section class="descrip">
+                            <h5 class="card-title">Game of Life</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">OpenCL Application</h6>
+                        </section>
+                    </section>
+                    <!-- Image Browser -->
+                    <section class="item">
+                        <section class="icon">
+                            <h5 class="card-title">OPEN</h5>
+                        </section>
+                        <section class="descrip">
+                            <h5 class="card-title">Image Browser</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">HTML/PHP/CSS webpage that shows images on the
+                                server
+                            </h6>
+                        </section>
+                    </section>
+                    <!-- Bannerlord Unit Manager -->
+                    <section class="item">
+                        <section class="icon">
+                            <h5 class="card-title">OPEN</h5>
+                        </section>
+                        <section class="descrip">
+                            <h5 class="card-title">Bannerlord Unit Manager</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">A Modding Tool for Mount and Blade Bannerlord</h6>
+                        </section>
+                    </section>
+                </div>
+            </div>
 
-        <!-- javascript -->
-        <script
-            type="text/javascript"
-            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-        ></script>
-        <script
-            type="text/javascript"
-            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.8.4/umd/popper.min.js"
-        ></script>
-        <script
-            type="text/javascript"
-            src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"
-        ></script>
-        <script>
-            $('.port-item').click(function() {
-                // collapse showing
-                let cshow = false;
-                let bg = {
-                    "home-nav": "bg-3",
-                    "resume-nav": "bg-4",
-                    "projects-nav": "bg-5"
-                }
-                // decrease size
-                $(this).parent().siblings().each(function(index, value) {
-                    let sib = $(`#${this.id}`);
-                    sib.removeClass(`col-md-6 active-nav`);
-                    sib.addClass('col-md-3 inactive-nav');
-                    sib.children().removeClass(`${bg[this.id]} color-1`);
+        </div>
+    </div>
 
-                })
-                // increase size
-                $(this).parent().removeClass('col-md-3 inactive-nav');
-                $(this).parent().addClass('col-md-6 active-nav');
-                // change color
-                $(this).addClass(`${bg[$(this).parent().attr('id')]} color-1`);
-                $('.collapse').collapse('hide');
-            })
-        </script>
-        </body>
-    </body>
+    <!-- javascript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.8.4/umd/popper.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+    <script>
+        $('.port-item').click(function () {
+            // collapse showing
+            let cshow = false;
+            let bg = {
+                "home-nav": "bg-3",
+                "resume-nav": "bg-4",
+                "projects-nav": "bg-5"
+            }
+            // decrease size
+            $(this).parent().siblings().each(function (index, value) {
+                let sib = $(`#${this.id}`);
+                sib.removeClass(`col-md-6 active-nav`);
+                sib.addClass('col-md-3 inactive-nav');
+                sib.children().removeClass(`${bg[this.id]} color-1`);
+
+            });
+            // increase size
+            $(this).parent().removeClass('col-md-3 inactive-nav');
+            $(this).parent().addClass('col-md-6 active-nav');
+            // change color
+            $(this).addClass(`${bg[$(this).parent().attr('id')]} color-1`);
+            $('.collapse').collapse('hide');
+        })
+        $(".item").mouseenter(function () {
+            $(this).children(".icon").each(function () {
+                $(this).css("display", "block");
+            });
+        })
+        $(".item").mouseleave(function () {
+            $(this).children(".icon").each(function () {
+                $(this).css("display", "none");
+            });
+
+        })
+    </script>
+</body>
+</body>
+
 </html>

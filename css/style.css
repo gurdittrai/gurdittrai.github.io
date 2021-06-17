@@ -1,9 +1,9 @@
-body {
-    /* background-image: url('../assets/background_web.jpg');
+/* body {
+    background-image: url('../assets/background_web.jpg');
     background-repeat: repeat;
-    background-size: 50% 50%; */
-    /* background-size: cover; */
-}
+    background-size: 50% 50%; 
+    background-size: cover; 
+} */
 
 .bg-1 {
     background-color: #272727;
@@ -119,6 +119,34 @@ body {
 
 #projects .bg-card {
     background-image: linear-gradient(#5998c5 40%, #154b72);
+}
+
+#projects .item {
+    display: flex;
+    padding: 1%;
+    margin: 1%;
+    border-radius: 8px;
+    border: 2px solid #272727;
+    /* transition: all 2s ease-in-out; */
+}
+
+#projects .item:hover {
+    /* color: #fff; */
+    background-image: linear-gradient(to right, #5998c5 15%, #ffffff 15%);
+}
+
+#projects .icon {
+    width: 20% !important;
+    transition: width .35s ease-in-out;
+    display: none;
+}
+
+/* #projects .icon:hover {
+    display: block;
+} */
+
+#projects .descrip {
+    width: 100% !important;
 }
 
 @keyframes card-anime {
