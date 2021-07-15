@@ -5,6 +5,10 @@
     background-size: cover; 
 } */
 
+.container-fluid{
+    padding: 0;
+ }
+
 .bg-1 {
     background-color: #272727;
 }
